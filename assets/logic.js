@@ -1,68 +1,10 @@
-//firebase starts here
-var config = {
-    apiKey: "AIzaSyBZvZj5UIZX7bn1ZQOgq7d3vl4T5ZJLl5I",
-    authDomain: "gamr-3bdcb.firebaseapp.com",
-    databaseURL: "https://gamr-3bdcb.firebaseio.com",
-    projectId: "gamr-3bdcb",
-    storageBucket: "gamr-3bdcb.appspot.com",
-    messagingSenderId: "1026590024264"
-  };
-      firebase.initializeApp(config);
-      //use these to tell you what ids to give all the inputs and buttons. 
-      var txtEmail = $("#txtEmail");
-      var txtPassword = $("#txtPassword");
-      var btnLogIn = $("#btnLogIn"); //button type = submit for all three
-      var btnSignUp = $("#btnSignUp");
-      var btnLogOut = $("#btnLogOut");
 
-
-    btnLogIn.on("click", e => {
-      var email = txtEmail.val().trim();
-      var pass = txtPassword.val().trim();
-      var auth = firebase.auth();
-      //sign in
-      auth.signInWithEmailAndPassword(email, pass);
-      promise.catch(e => console.log(e.message));
-
-    });
-
-    //sign up event
-    btnSignUp.on("click", e => {
-      //to do: check for real email 
-      var email = txtEmail.val().trim();
-      var pass = txtPassword.val().trim();
-      var auth = firebase.auth();
-      //sign in
-      auth.createUserWithEmailAndPassword(email, pass);
-      promise
-        .catch(e => console.log(e.message));
-
-    })
-
-    btnLogOut.on("click", e => {
-      firebase.auth().signOut();
-    });
-
-
-    //add a realtime listener
-    firebase.auth().onAuthStateChanged(firebaseUser => {
-
-      if(firebaseUser){
-        console.log(firebaseUser);
-        btnLogOut.removeClass("hide");
-      } else {
-        console.log('not logged in');
-        btnLogOut.addClass("hide");
-      }
-    });
-
-    //firebase ends here
          
 
 //On click/'enter' store input as a variable and pass to giantbomb url
 $("#click-search").on("click", function(event) {
    var searchTerm = $("#searchValue").val().trim();
-    var queryUrl = 'https://cors-anywhere.herokuapp.com/https://www.giantbomb.com/api/search/?format=jsonp&api_key=687d257ace2a1dad49e71172b53403375c11d333&query=' + searchTerm + '&resources=game'; 
+    var queryUrl = 'http://www.giantbomb.com/api/search/?format=jsonp&api_key=687d257ace2a1dad49e71172b53403375c11d333&query=' + searchTerm + '&resources=game'; 
 
     event.preventDefault();
     $("#resultsDiv").html("");
@@ -81,6 +23,11 @@ $("#click-search").on("click", function(event) {
         jsonp: 'json_callback',
         url: queryUrl,
     }).done(function(response) {
+      console.log(response);
+
+      if (response.length < 1){
+        alert("nope");
+      }
 
         $(".loader").addClass("hide");
         var results = response.results
