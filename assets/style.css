@@ -1,0 +1,142 @@
+#headerBrand{
+    font-family: 'Russo One', sans-serif;
+
+}
+
+#navBar{
+  background-color: #14141f;
+
+}
+
+#signupBtn{
+  margin-right: 10px;
+
+}
+
+.websiteName{
+  padding-top: 130px;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  background: transparent;
+  font-family: 'Russo One', sans-serif;
+
+}
+
+.websiteName h1{
+  font-size: 200px;
+
+}
+
+#searchBar2{
+  
+
+}
+.stylish-input-group .input-group-addon{
+    background: white;
+
+}
+
+.input-group-addon{
+  background: white;
+  padding: 0px 0px 0px 0px;
+
+}
+
+.stylish-input-group .form-control{
+  border-right: 0; 
+  box-shadow: 0 0 0; 
+  border-color: #ccc;
+}
+
+.stylish-input-group button{
+  border: 0;
+  background: transparent;
+
+}
+.mouseOverSection{
+  position: fixed;
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  bottom: 60px;
+  text-align: center;
+
+}
+.mouseOverSection p{
+  opacity: 0.5;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+
+
+}
+
+#footerContainer{
+  padding-right: 15px;
+  padding-left: :15px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+    
+}
+
+#footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%; 
+  height: 30px;
+  background-color: #181825;
+  padding-top: 5px;
+  border:black;
+  display: none;
+
+}
+
+#newsFeed{
+  width: 100%;
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll 60s infinite linear;
+}
+
+#newsFeed a{
+  color: white;
+  margin-right: 50px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+
+}
+
+#footer:hover #newsFeed{
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    transform: translate(0, 0);
+  }
+  
+  100% {
+        transform: translate(-200%, 0);
+  }
+}
+
+ .loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

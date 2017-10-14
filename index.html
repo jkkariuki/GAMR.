@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Gamr.</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/vegas.css">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-inverse" role="navigation" id="navBar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" id="navDropdown">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" id="headerBrand">Gamr.</a>
+            </div>
+        </div>
+    </nav>
+    
+    <button type='button' style='color: black' id='trailersBtn' class='btn btn-default hide'>Trailers</button>
+
+    <div id="main-space">
+        <div class="websiteName" id="fadeInDown">
+            <h1 class="animated fadeInDown">Gamr.</h1>
+        </div>
+    </div>
+    <div id="searchResults" class="col-md-6 col-md-offset-3">
+        <div id="searchBar">
+            <form class="input-group stylish-input-group animated fadeInDown">
+                <input type="text" id="searchValue" class="form-control" placeholder="Search">
+                <span class="input-group-addon">
+                <button type="submit" id="click-search" class="btn btn-default btn-sm form-controls">
+                <span class="glyphicon glyphicon-search"></span>
+                </button>
+            </form>
+        </div>
+        <div style="margin-top:20%; margin-left:45%" class="loader hide">
+        </div>
+        <div id="resultsDiv" class="">
+        </div>
+    </div>
+    <div id="trailerResults">
+    </div>
+    <div class="mouseOverSection animated fadeInUp">
+        <p>. . .</p>
+        <div id="footerContainer">
+            <div id="footer">
+                <div id="newsFeed"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="assets/logic.js"></script>
+<script type="text/javascript" src="assets/vegas.js">
+</script>
+
+</html>
