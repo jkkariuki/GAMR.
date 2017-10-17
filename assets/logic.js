@@ -4,7 +4,7 @@
 //On click/'enter' store input as a variable and pass to giantbomb url
 $("#click-search").on("click", function(event) {
    var searchTerm = $("#searchValue").val().trim();
-    var queryUrl = 'https://cors-anywhere.herokuapp.com/https://www.giantbomb.com/api/search/?format=jsonp&api_key=687d257ace2a1dad49e71172b53403375c11d333&query=' + searchTerm + '&resources=game'; 
+    var queryUrl = 'http://www.giantbomb.com/api/search/?format=jsonp&api_key=687d257ace2a1dad49e71172b53403375c11d333&query=' + searchTerm + '&resources=game'; 
 
     event.preventDefault();
     $("#resultsDiv").html("");
@@ -21,14 +21,11 @@ $("#click-search").on("click", function(event) {
         dataType: 'jsonp',
         crossDomain: true,
         jsonp: 'json_callback',
-        url: queryUrl,
+        url:  queryUrl, 
     }).done(function(response) {
       console.log(response);
 
-      if (response.length < 1){
-        alert("nope");
-      }
-
+      
         $(".loader").addClass("hide");
         var results = response.results
         console.log(results);
@@ -79,11 +76,11 @@ $("#click-search").on("click", function(event) {
 
                     $("#trailerResults").append(trailerDiv);
                 }
-            });
-        })
-    }).fail(function() {
-        alert("error");
-    }); // 
+            }).fail(function() {
+        		alert("error");
+    		}); 
+    	});
+	});
 });
 
 
