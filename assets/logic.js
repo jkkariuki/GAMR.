@@ -4,7 +4,7 @@
 //On click/'enter' store input as a variable and pass to giantbomb url
 $("#click-search").on("click", function(event) {
    var searchTerm = $("#searchValue").val().trim();
-    var queryUrl = 'http://www.giantbomb.com/api/search/?format=jsonp&api_key=687d257ace2a1dad49e71172b53403375c11d333&query=' + searchTerm + '&resources=game'; 
+    var queryUrl = 'https://www.giantbomb.com/api/search/?format=jsonp&api_key=687d257ace2a1dad49e71172b53403375c11d333&query=' + searchTerm + '&resources=game'; 
 
     event.preventDefault();
     $("#resultsDiv").html("");
