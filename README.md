@@ -8,3 +8,11 @@ Live Link https://jkkariuki.github.io/GAMR./
 
 Built With HTML, Bootstrap, jQuery
 
+<img src="assets/images/GAMR.png">
+
+<img src="assets/images/searchresults.png">
+
+<img src="assets/images/trailerresults.png">
+
+
+
