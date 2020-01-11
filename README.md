@@ -4,7 +4,7 @@ A video game search engine that allows users to find media related to any video 
 
 The app uses the Youtube, GiantBomb, and IGN News API's.
 
-Live Link https://jkkariuki.github.io/GAMR./
+https://aqueous-earth-97113.herokuapp.com/
 
 Built With HTML, Bootstrap, jQuery
 
